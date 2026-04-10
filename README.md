@@ -1,30 +1,61 @@
 # dotnet-aspnet
 
-A minimal ASP.NET Core web application built with .NET 9.
+A web API example built with [ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/) — a cross-platform, high-performance framework for building modern web APIs with .NET 9.
 
-## Overview
+## Run with gws
 
-This project demonstrates a basic ASP.NET Core web server with OpenAPI/Swagger support. It serves a simple "Hello World" response at the root endpoint.
+### 1. Install the GetWebstack CLI
 
-## Requirements
-
-- [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9.0)
-
-## Getting Started
+Install the [GetWebstack](https://getwebstack.com) CLI ([docs](https://getwebstack.com/docs) | [installation](https://getwebstack.com/docs/installation)):
 
 ```bash
-dotnet run
+curl -sSL https://getwebstack.com/install.sh | bash
 ```
 
-The server will start and listen on the default port. Visit `http://localhost:8080` to see the response.
+### 2. Clone the repository
 
-## Endpoints
+```bash
+git clone https://github.com/GetWebstack-public/dotnet-aspnet
+cd dotnet-aspnet
+```
 
-| Method | Path | Description       |
-|--------|------|-------------------|
-| GET    | `/`  | Returns "Hello World" |
+### 3. Initialise from template setup
 
-## Dependencies
+```bash
+gws init --from-file gws.json
+```
 
-- `Microsoft.AspNetCore.OpenApi` 9.0.0
-- `Swashbuckle.AspNetCore` 6.5.0
+### 4. Deploy the service
+
+```bash
+gws up
+```
+
+### 5. Stream logs
+
+```bash
+gws logs
+```
+
+### 6. See deployment status
+
+```bash
+gws status
+```
+
+## Other .NET projects
+
+| Project | Framework | Description |
+|---|---|---|
+| [dotnet-blazor](https://github.com/GetWebstack-public/dotnet-blazor) | [Blazor](https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor) | Interactive web UI with C# and .NET 9 |
+| [dotnet-fsharp](https://github.com/GetWebstack-public/dotnet-fsharp) | [F#](https://fsharp.org/) | Minimal web API using F# and ASP.NET Core |
+| [dotnet-minimal-api](https://github.com/GetWebstack-public/dotnet-minimal-api) | [Minimal API](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis) | Lightweight HTTP API with minimal ceremony |
+
+## Other project families
+
+| Family | Repository | Description |
+|---|---|---|
+| Python | [python-projects](https://github.com/GetWebstack-public/python-projects) | FastAPI, Django, Flask, and more |
+| JS/TS Backend | [js-ts-backend](https://github.com/GetWebstack-public/js-ts-backend) | Express, NestJS, Fastify, and more |
+| JS/TS Frontend | [js-ts-frontend](https://github.com/GetWebstack-public/js-ts-frontend) | React, Next.js, Vue, and more |
+| Go | [go-projects](https://github.com/GetWebstack-public/go-projects) | Chi, Gin, Echo, Fiber, and more |
